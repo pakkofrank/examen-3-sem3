@@ -12,11 +12,13 @@ agregar(nuevo) {
                 nuevo.sig = a;
                 this._pri = nuevo;
             }
-        }
-    } else if (a.sig) {
-        nuevo.sig = a.sig;
-        a.sig = nuevo;
+        } else if (a.sig) {
+            nuevo.sig = a.sig;
+            a.sig = nuevo;
 
+        }else{
+            a.sig = nuevo;
+        }
     } else {
         var a = this._pri;
         while (a.sig) {
